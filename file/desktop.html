@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+
+	<!-- Windows 12 网页版 谭景元原创  -->
+
+	<!-- Windows 12 网页版是一个开放源项目,
+	希望让用户在网络上预先体验 Windows 12,
+	内容可能与 Windows 12 正式版本不一致。
+	使用标准网络技术,例如 HTML、CSS 和 Javascript
+	此项目绝不附属于微软,且不应与微软操作系统或产品混淆,
+	这也不是 Windows365 cloud PC
+	本项目中微软、Windows和其他示范产品是微软公司的商标 -->
+	<link rel="stylesheet" href="./desktop.css" />
+	<!-- Apps style -->
+	<link rel="stylesheet" href="apps/style/setting.css">
+	<link rel="stylesheet" href="apps/style/explorer.css">
+	<link rel="stylesheet" href="apps/style/calc.css">
+	<link rel="stylesheet" href="apps/style/about.css">
+	<link rel="stylesheet" href="apps/style/notepad.css">
+	<link rel="stylesheet" href="apps/style/terminal.css">
+	<link rel="stylesheet" href="apps/style/fonts.css">
+	<link rel="stylesheet" href="apps/style/edge.css">
+	<link rel="stylesheet" href="widgets.css">
+	<link rel="manifest" href="pwa/manifest.json">
+	<base target="_blank">
+</head>
+
+<!-- 
+
+	你好
+	麻烦看一下 desktop.js line 635
+	apps/style/font.css
+	可以顺便写一下更新日志 :)
+-->
+
+<body>
+	<div id="loadback" style="background-color:#000;width:100%;height:100%;z-index:105;position:absolute;transition:200ms;">
+		<style>#loadback.hide{opacity:0;}loading>svg>circle:last-child{stroke:#fff;fill:none;stroke-width:2px;
+			stroke-linecap:round;animation:spin-infinite 2s linear 0s infinite normal none running;
+			transform-origin:50% 50%;transition: all .2s ease-in-out 0s;}
+			loading>svg{background-color: #00000000;border-radius: 50%;}
+			@keyframes spin-infinite {0%{stroke-dasharray:.01px,43.97px;transform:rotate(0deg)}
+				50%{stroke-dasharray:21.99px,21.99px;transform:rotate(450deg)}
+				to{stroke-dasharray:.01px,43.97px;transform:rotate(3turn)}}</style>
+		<svg id="loadbacksvg" viewbox="0,0,306,305" style="transition: 1s;opacity: 0;position: absolute;left: calc(50% - 125px);top:20%;"
+			width="250" height="250" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><clipPath id="clip0"><rect x="897" y="208" width="306" height="305"/></clipPath><linearGradient x1="885.371" y1="221.859" x2="1214.63" y2="498.141" gradientUnits="userSpaceOnUse" spreadMethod="reflect" id="fill1"><stop offset="0" stop-color="#A964C8"/><stop offset="0.18" stop-color="#A964C8"/><stop offset="0.36" stop-color="#A266E4"/><stop offset="0.73" stop-color="#346ED8"/><stop offset="0.91" stop-color="#2D8AD5"/><stop offset="1" stop-color="#2D8AD5"/></linearGradient><linearGradient x1="317.629" y1="13.8595" x2="-11.6295" y2="290.141" gradientUnits="userSpaceOnUse" spreadMethod="reflect" id="fill2"><stop offset="0" stop-color="#A964C8"/><stop offset="0.18" stop-color="#A964C8"/><stop offset="0.36" stop-color="#A266E4"/><stop offset="0.73" stop-color="#346ED8"/><stop offset="0.91" stop-color="#2D8AD5"/><stop offset="1" stop-color="#2D8AD5"/></linearGradient><linearGradient x1="885.371" y1="221.859" x2="1214.63" y2="498.141" gradientUnits="userSpaceOnUse" spreadMethod="reflect" id="fill3"><stop offset="0" stop-color="#A964C8"/><stop offset="0.18" stop-color="#A964C8"/><stop offset="0.36" stop-color="#A266E4"/><stop offset="0.73" stop-color="#346ED8"/><stop offset="0.91" stop-color="#2D8AD5"/><stop offset="1" stop-color="#2D8AD5"/></linearGradient><linearGradient x1="-11.6295" y1="290.141" x2="317.629" y2="13.8595" gradientUnits="userSpaceOnUse" spreadMethod="reflect" id="fill4"><stop offset="0" stop-color="#A964C8"/><stop offset="0.18" stop-color="#A964C8"/><stop offset="0.36" stop-color="#A266E4"/><stop offset="0.73" stop-color="#346ED8"/><stop offset="0.91" stop-color="#2D8AD5"/><stop offset="1" stop-color="#2D8AD5"/></linearGradient></defs><g clip-path="url(#clip0)" transform="translate(-897 -208)"><path d="M936.813 208 1035.2 208 1035.2 208 1036 340.407C1011.65 331.352 986.507 325.493 963.762 325.226 941.508 325.759 919.254 339.075 897 346L897 247.755C897 225.799 914.825 208 936.813 208Z" fill="url(#fill1)" fill-rule="evenodd"/><path d="M40.0431 0 139 0 139 0 139 140.549C115.82 150.681 92.6407 159.212 69.4611 158.946 45.5026 160.012 23.1537 145.082 0 138.15L0 39.7981C0 17.8182 17.9278 0 40.0431 0Z" fill="url(#fill2)" fill-rule="evenodd" transform="matrix(-1 0 0 1 1203 208)"/><path d="M1163.19 512 1064.8 512 1064.8 512 1064 379.593C1088.35 388.648 1113.49 394.507 1136.24 394.774 1158.49 394.241 1180.75 380.925 1203 374L1203 472.245C1203 494.201 1185.18 512 1163.19 512Z" fill="url(#fill3)" fill-rule="evenodd"/><path d="M39.755 0 138 0 138 0 138 140.549C114.987 150.681 91.9742 159.212 68.9614 158.946 45.1752 160.012 22.9872 145.082 0 138.15L0 39.7981C0 17.8182 17.7989 0 39.755 0Z" fill="url(#fill4)" fill-rule="evenodd" transform="matrix(1 -1.22465e-16 -1.22465e-16 -1 897 512)"/></g></svg>
+		<loading id="loadbackloading" style="transition:1s;opacity:0;">
+			<svg style="position:absolute;left:calc(50% - 25px);top:72%;" width="50px" height="50px" viewBox="0 0 16 16">
+				<circle cx="8px" cy="8px" r="7px"></circle></svg>
+		<p id="loadbackupdate" style="position:absolute;top:calc(72% + 55px);left:0;width:100%;text-align:center;color:#fff;font-size: 25px;display:none;">正在更新</p>
+		</loading><script>setTimeout(() => {document.getElementById('loadbacksvg').style.opacity=1;
+		document.getElementById('loadbackloading').style.opacity=1;}, 100);</script>
+	</div>
+	<!-- <img src="https://bing.com/th?id=OHR.Trossachs_ZH-CN9299955040_UHD.jpg&qlt=100" alt=""> -->
+	<script src="./jq.min.js"></script>
+	<div id="start-menu">
+		<!-- 开始菜单 -->
+		<div id="s-m-l">
+			<div id="s-m-user">
+				<svg viewBox="0,0,257,344" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden"><defs><clipPath id="user-clip0"><rect x="382" y="195" width="257" height="344"/></clipPath><linearGradient x1="351.462" y1="233.56" x2="669.496" y2="500.422" gradientUnits="userSpaceOnUse" spreadMethod="reflect" id="user-fill1"><stop offset="0" stop-color="#A964C8"/><stop offset="0.35" stop-color="#A964C8"/><stop offset="0.87" stop-color="#2D8AD5"/><stop offset="1" stop-color="#2D8AD5"/></linearGradient><linearGradient x1="351.462" y1="233.56" x2="669.496" y2="500.422" gradientUnits="userSpaceOnUse" spreadMethod="reflect" id="user-fill2"><stop offset="0" stop-color="#A964C8"/><stop offset="0.35" stop-color="#A964C8"/><stop offset="0.87" stop-color="#2D8AD5"/><stop offset="1" stop-color="#2D8AD5"/></linearGradient></defs><g clip-path="url(#user-clip0)" transform="translate(-382 -195)"><path d="M637.755 433.872C642.215 515.221 579.577 537.983 508.011 537.983 436.444 537.983 376.676 507.833 383.513 437.11 383.109 425.234 389.59 414.133 398.634 409.891 413.82 402.768 444.753 402.936 507.484 402.997 570.214 403.058 609.164 402.279 621.521 407.947 633.878 413.614 638.011 424.609 637.755 433.872Z" fill="url(#user-fill1)" fill-rule="evenodd"/><path d="M422 285C422 235.847 461.623 196 510.5 196 559.377 196 599 235.847 599 285 599 334.153 559.377 374 510.5 374 461.623 374 422 334.153 422 285Z" fill="url(#user-fill2)" fill-rule="evenodd"/></g></svg>
+			</div>
+			<p style="width: 100%;text-align: center;margin: -50px 0 20px 0;font-size: 30px;">Administartor</p>
+			<input type="text" class="input" win12_title="搜索" placeholder="在这里输入你要搜索的内容" onfocus="hide_startmenu();
+				$('#search-btn').addClass('show');
+				$('#search-win').addClass('show-begin');
+				setTimeout(() => {
+					$('#search-win').addClass('show');
+				}, 0);
+				$('#search-input').focus();">
+			<input-before class="bi bi-search"></input-before>
+			<list>
+				<p class="text">可用</p>
+				<a onclick="openapp('setting');hide_startmenu();">
+					<img src="icon/setting.png"><p>设置</p></a>
+				<a onclick="openapp('explorer');hide_startmenu();">
+					<img src="icon/explorer.png"><p>文件资源管理器</p></a>
+				<a onclick="openapp('calc');hide_startmenu();">
+					<img src="icon/calc.png"><p>计算器</p></a>
+				<a onclick="openapp('about');hide_startmenu();">
+					<img src="icon/about.png"><p>关于Win12网页版</p></a>
+				<a onclick="openapp('notepad');hide_startmenu();">
+					<img src="icon/notepad.png"><p>记事本</p></a>
+				<a onclick="openapp('terminal');hide_startmenu();">
+					<img src="icon/terminal.png"><p>终端</p></a>
+				<a onclick="openapp('edge');hide_startmenu();">
+					<img src="icon/edge.png"><p>Microsoft Edge</p></a>
+				<p class="text">其它</p>
+				<a><img src="icon/camera.png"><p>相机</p></a>
+			</list>
+		</div>
+		<div id="s-m-r">
+			<div class="row1">
+				<div class="folder">
+					<a class="a sm-app enable" onclick="openapp('explorer');apps.explorer.goto('C:/用户/Administrator/文档');
+						hide_startmenu();"><img src="icon/folder/docs.png"><p>文档</p></a>
+					<a class="a sm-app enable" onclick="openapp('explorer');apps.explorer.goto('C:/用户/Administrator/图片');
+						hide_startmenu();"><img src="icon/folder/pics.png"><p>图片</p></a>
+					<a class="a sm-app enable" onclick="openapp('explorer');apps.explorer.goto('C:/用户/Administrator/音乐');
+						hide_startmenu();"><img src="icon/folder/music.png"><p>音乐</p></a></div>
+				<div class="tool">
+					<p style="font-size: 40px;margin-bottom: -10px;" class="time">12:00</p>
+					<p class="date">星期一, 2368年13月34日</p>
+					<a class="a btn btn-icon power" win12_title="电源" onclick="$(this).addClass('show')">
+						<span class="bi bi-power"></span>
+						<i class="bi bi-power" onclick="$('#start-menu').removeClass('show');
+						setTimeout(() => {window.location='shutdown.html';},200);" win12_title="关机"></i>
+						<i class="bi bi-arrow-counterclockwise" onclick="$('#start-menu').removeClass('show');
+						setTimeout(() => {window.location='reload.html';},200);" win12_title="重启"></i>
+					</a>
+					<a class="a btn btn-icon big" win12_title="切换全屏" onclick="
+					if($('#start-menu').hasClass('max')){
+						$('#start-menu>#s-m-r>.row1>.tool>.btn-icon.big').html('<i class=\'bi bi-arrows-angle-expand\'></i>');
+						$('#start-menu').removeClass('max');
+					}else{
+						$('#start-menu>#s-m-r>.row1>.tool>.btn-icon.big').html('<i class=\'bi bi-arrows-angle-contract\'></i>');
+						$('#start-menu').addClass('max');
+					}
+					">
+						<i class="bi bi-arrows-angle-expand"></i>
+					</a>
+				</div>
+			</div>
+			<div class="pinned">
+				<!-- 已固定 卡片 -->
+				<div class="title">
+					<p>已固定</p>
+					<div>
+						<a class="a more-btn">所有应用 <i class="bi bi-chevron-right"></i></a>
+						<!-- 这个好像没什么必要 -->
+					</div>
+				</div>
+				<div class="apps">
+					<a class="a sm-app enable" onclick="openapp('calc');hide_startmenu();" oncontextmenu="return showcm(event,'smapp',['calc','计算器'])">
+						<img src="icon/calc.png"><p>计算器</p></a>
+					<a class="a sm-app"><img src="icon/camera.png"><p>相机</p></a>
+					<a class="a sm-app enable jump" onclick="window.open('https:\/\/github.com/tjy-gitnub/win12/issues','_blank');">
+						<img src="icon/feedback.png"><p>反馈中心</p></a>
+					<a class="a sm-app"><img src="icon/defender.png"><p>Windows 安全中心</p></a>
+					<a class="a sm-app enable" onclick="openapp('about');hide_startmenu();" oncontextmenu="return showcm(event,'smapp',['about','关于 Win12 网页版'])">
+						<img src="icon/about.png"><p>关于Win12网页版</p></a>
+					<a class="a sm-app enable" onclick="openapp('explorer');hide_startmenu();" oncontextmenu="return showcm(event,'smapp',['explorer','文件资源管理器'])">
+						<img src="icon/explorer.png"><p>文件资源管理器</p></a>
+					<a class="a sm-app enable" onclick="openapp('notepad');hide_startmenu();" oncontextmenu="return showcm(event,'smapp',['notepad','记事本'])">
+						<img src="icon/notepad.png"><p>记事本</p></a>
+					<a class="a sm-app enable" onclick="openapp('setting');hide_startmenu();" oncontextmenu="return showcm(event,'smapp',['setting','设置'])">
+						<img src="icon/setting.png"><p>设置 </p></a>
+					<a class="a sm-app"><img src="icon/store.png"><p>Microsoft Store</p></a>
+					<a class="a sm-app enable" onclick="openapp('edge');hide_startmenu();" oncontextmenu="return showcm(event,'smapp',['edge','Microsoft Edge'])">
+						<img src="icon/edge.png"><p>Microsoft Edge</p></a>
+					<a class="a sm-app enable"><img src="icon/office.png"><p>这是Office</p></a>
+					<a class="a sm-app enable" onclick="openapp('terminal');hide_startmenu();" oncontextmenu="return showcm(event,'smapp',['terminal','终端'])">
+						<img src="icon/terminal.png"><p>终端</p></a>
+				</div>
+			</div>
+			<div class="tuijian">
+				<!-- 推荐的项目 卡片 -->
+				<div class="title">
+					<p>推荐的项目</p>
+					<div>
+						<a class="a more-btn">更多 <i class="bi bi-chevron-right"></i></a>
+					</div>
+				</div>
+				<div class="apps">
+					<a class="a tj-obj act"><img src="icon/files/ppt.png"><div><p>科学地使用瓶盖.pptx</p><p>5 分钟前</p></div></a>
+					<a class="a tj-obj act"><img src="icon/files/img.png"><div><p>可口可乐瓶盖.jpg</p><p>7 分钟前</p></div></a>
+					<a class="a tj-obj act"><img src="icon/files/img.png"><div><p>瓶盖构造图.jpg</p><p>16 分钟前</p></div></a>
+					<a class="a tj-obj act"><img src="icon/files/word.png"><div><p>瓶盖的构造及作用.docx</p><p>24 分钟前</p></div></a>
+					<a class="a tj-obj act"><img src="icon/files/excel.png"><div><p>可口可乐瓶盖厚度.xlsx</p><p>35 分钟前</p></div></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="search-win">
+		<!-- 搜索框 -->
+		<input type="text" class="input" placeholder="在这里输入你要搜索的内容" id="search-input" oninput="apps.search.search(this.value.length)">
+		<input-before class="bi bi-search"></input-before>
+		<div class="tab">
+			<a class="now">全部</a><a>应用</a><a>文档</a><a>网页</a>
+			<a>电子邮件</a><a>人员</a><a>设置</a><a>视频</a>
+			<a>文件夹</a><a>音乐</a><a>照片</a>
+		</div>
+		<div class="ans">
+			<div class="list">
+				<list>
+					<p class="text">推荐</p>
+					<a onclick="openapp('setting');$('#search-btn').removeClass('show');
+					$('#search-win').removeClass('show');
+					setTimeout(() => {
+						$('#search-win').removeClass('show-begin');
+					}, 200);">
+						<img src="icon/setting.png"><p>设置</p></a>
+					<a onclick="openapp('about');$('#search-btn').removeClass('show');
+					$('#search-win').removeClass('show');
+					setTimeout(() => {
+						$('#search-win').removeClass('show-begin');
+					}, 200);">
+						<img src="icon/about.png"><p>关于Win12网页版</p></a>
+				</list>
+			</div>
+			<div class="view">
+				<div class="fname">
+					<i class="bi bi-search"></i>
+					<p class="name"></p>
+					<p class="type"></p>
+				</div>
+				<hr>
+				<div class="option">
+					<list>
+						<a class="a">打开</a>
+						<a class="a">打开文件所在位置</a>
+						<a class="a">复制路径</a>
+					</list>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="widgets">
+		<div class="widgets">
+			<div class="bar">
+				<p class="tit">小组件</p>
+				<button onclick="widgets.widgets.add('calc')" class="a act btn btn-icon big" style="background: linear-gradient(100deg, var(--theme-1), var(--theme-2));color:#fff;" win12_title="添加"><i class="bi bi-plus-lg"></i></button>
+			</div>
+			<div class="content">
+				<div class="template">
+					<div class="calc">
+						<div class="wg calc">
+							<div class="titbar">
+								<a win12_title="更多" onmouseenter="showdescp(event)" onmouseleave="hidedescp(event)" class="a more notip" onclick="$('.wg.calc>.titbar>.menu').toggleClass('show')"><i class="bi bi-three-dots"></i></a>
+								<div class="menu">
+									<a win12_title="打开应用" class="a img notip" onclick="$('.wg.calc>.titbar>.menu').removeClass('show');hide_widgets();openapp('calc')" onmouseenter="showdescp(event)" onmouseleave="hidedescp(event)">
+										<img src="icon/calc.png">
+									</a>
+									<a class="a notip" win12_title="移动 (不可用)" onmouseenter="showdescp(event)" onmouseleave="hidedescp(event)"><i class="bi bi-arrows-move"></i></a>
+									<a class="a notip" win12_title="添加到桌面 (不可用)" onmouseenter="showdescp(event)" onmouseleave="hidedescp(event)"><i class="bi bi-menu-app"></i></a>
+									<a class="a notip" win12_title="删除" onmouseenter="showdescp(event)" onmouseleave="hidedescp(event)" onclick="$('.wg.calc>.titbar>.menu').removeClass('show');widgets.widgets.remove('calc')"><i class="bi bi-trash"></i></a>
+								</div>
+							</div>
+							<div class="content">
+								<input value="" onkeydown="if(event.keyCode == 13)$('*:not(.template)>*>.wg.calc>.content>.keyb>.ans').click()">
+								<a style="grid-area: pow;" class="b" onclick="$('*:not(.template)>*>.wg.calc>.content>input')[0].value*=$('*:not(.template)>*>.wg.calc>.content>input').val()">𝑥²</a>
+								<a style="grid-area: sqrt;" class="b" onclick="$('*:not(.template)>*>.wg.calc>.content>input').val(Math.sqrt($('*:not(.template)>*>.wg.calc>.content>input').val()))">√𝑥</a>
+								<a style="grid-area: c;" class="b" onclick="$('*:not(.template)>*>.wg.calc>.content>input')[0].value=''">C</a>
+								<a style="grid-area: jia;" class="b u" onclick="widgets.calc.add('+')">+</a>
+								<a style="grid-area: n7;" class="b" onclick="widgets.calc.add('7')">7</a>
+								<a style="grid-area: n8;" class="b" onclick="widgets.calc.add('8')">8</a>
+								<a style="grid-area: n9;" class="b" onclick="widgets.calc.add('9')">9</a>
+								<a style="grid-area: jian;" class="b u" onclick="widgets.calc.add('-')">-</a>
+								<a style="grid-area: n4;" class="b" onclick="widgets.calc.add('4')">4</a>
+								<a style="grid-area: n5;" class="b" onclick="widgets.calc.add('5')">5</a>
+								<a style="grid-area: n6;" class="b" onclick="widgets.calc.add('6')">6</a>
+								<a style="grid-area: cheng;" class="b u" onclick="widgets.calc.add('*')">×</a>
+								<a style="grid-area: n1;" class="b" onclick="widgets.calc.add('1')">1</a>
+								<a style="grid-area: n2;" class="b" onclick="widgets.calc.add('2')">2</a>
+								<a style="grid-area: n3;" class="b" onclick="widgets.calc.add('3')">3</a>
+								<a style="grid-area: chu;" class="b u" onclick="widgets.calc.add('/')">÷</a>
+								<a style="grid-area: dot;" class="b" onclick="widgets.calc.add('.')">.</a>
+								<a style="grid-area: n0;" class="b" onclick="widgets.calc.add('0')">0</a>
+								<a style="grid-area: back;" class="b" onclick="$('*:not(.template)>*>.wg.calc>.content>input').val($('*:not(.template)>*>.wg.calc>.content>input')[0].value.substring(0,$('*:not(.template)>*>.wg.calc>.content>input')[0].value.length-1));"><i class="bi bi-backspace"></i></a>
+								<a style="grid-area: ans;" class="b ans u" onclick="$('*:not(.template)>*>.wg.calc>.content>input')[0].value=eval($('*:not(.template)>*>.wg.calc>.content>input')[0].value)"> =</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="grid">
+
+				</div>
+			</div>
+		</div>
+		<span class="hr"></span>
+		<div class="news">
+			<div class="bar">
+				<p class="tit">新闻</p>
+				<p style="color: #7f7f7f;margin-right: 5px;margin-top: 2px;">注意: 新闻内容均不属实 </p>
+			</div>
+			<div class="content">
+				<div class="card" style="grid-column: 1/6;grid-row: 1/3;color: #fff;background: var(--bgul);background-position:-20px -280px;background-size: 170%;">
+					<p class="tit" style="font-size: 20px;margin: 100px 0 0 180px;text-shadow: 0 0 8px #000;">Windows12 v5.0.0 发布</p>
+					<a class="a" style="margin: 5px 0 0 250px;font-size: 17px;color: #9dd0fb;text-shadow: 0 0 3px #000;" onclick="hide_widgets();
+					openapp('about');if($('.window.about').hasClass('min'))minwin('about');
+					$('#win-about>.about').removeClass('show');$('#win-about>.update').addClass('show');
+					$('#win-about>.update>div>details:first-child').attr('open','open')">详细信息 ></a>
+				</div>
+				<div class="card" style="grid-column: 4/6;grid-row: 7/9;background:url(img/win13.jpg) right;background-size: cover;">
+					<p class="tit" style="margin: 70px 0 0 10px;color: #fff;">Windows13 即将发布，官方透露: 将自带 Macos 子系统</p>
+					<a class="a" style="margin: 5px 0 0 80px;font-size: 17px;color: #9dd0fb;text-shadow: 0 0 3px #000;">详细信息 ></a>
+				</div>
+				<div class="card" style="grid-column: 4/6;grid-row: 3/5;background:linear-gradient(#00000000,var(--bg) 70%),url(img/win11.jpg) center;background-size: cover;">
+					<p class="tit" style="margin: 100px 0 0 10px;">Windows11 将于下周停止支持</p>
+					<a class="a" style="margin: 5px 0 0 80px;font-size: 17px;">详细信息 ></a>
+				</div>
+				<div class="card" style="grid-column: 1/3;grid-row: 5/7;background:linear-gradient(#00000000,#111 80%),url(img/corsiri.svg) bottom;background-size: 150%;">
+					<p class="tit" style="margin: 80px 0 0px 10px;color: #fff;">2029年,微软终重拾Cortana 微软员工透露:将与Siri整合</p>
+					<a class="a" style="margin: 0 0 0 80px;font-size: 17px;color: #9dd0fb;">详细信息 ></a>
+				</div>
+				<div class="card" style="grid-column: 1/4;grid-row: 7/9;background:linear-gradient(#00000000,#111 90%),url(img/wsm.png) left;background-size: 120%;">
+					<p class="tit" style="margin: 100px 0 0px 10px;color: #fff;">微软发布 Windows Subsystem for MacOS</p>
+					<a class="a" style="margin: 0 0 0 170px;font-size: 17px;color: #9dd0fb;">详细信息 ></a>
+				</div>
+				<div class="card" style="grid-column: 3/6;grid-row: 5/7;background:linear-gradient(#00000000 0 30%,var(--bg) 70%),url(img/mc.jpg) bottom;background-size: cover;">
+					<p class="tit" style="margin: 100px 0 -20px 10px;">今日凌晨,Minecraft把代理权交给中国航天员谭景元,网易败下阵来了?</p>
+					<a class="a" style="margin: 0 0 0 170px;font-size: 17px;">详细信息 ></a>
+				</div>
+				<div class="card" style="grid-column: 1/4;grid-row: 3/5;background:linear-gradient(#00000000 0 30%,var(--bg) 80%),url(img/yq.jpg) center;background-size: cover;">
+					<p class="tit" style="margin: 120px 0 -20px 10px;">中国宇航员谭景元昨天下午成功登月</p>
+					<a class="a" style="margin: 0 0 0 150px;font-size: 17px;">详细信息 ></a>
+				</div>
+				<div class="card" style="grid-column: 1/3;grid-row: 9/11;background:#171b22;">
+					<p class="tit" style="font-size: 19px;margin: 50px 0 0 10px;color: #fff;">想给新闻增加更多奇思妙想? <br>快在github上来提交吧</p>
+					<a class="a" win12_title="https://github.com/tjy-gitnub/win12/issues" style="margin: 10px 0 0 70px;font-size: 17px;color: #9dd0fb" onclick="
+					window.open('https://github.com/tjy-gitnub/win12/issues','_blank');">提交issues ></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="datebox">
+		<div class="tit">
+			<p class="time">12:29:19</p>
+			<p class="date">星期一, 2022年09月22日</p>
+			<hr>
+		</div>
+		<div class="cont">
+			<div class="head">
+				<p>一</p><p>二</p><p>三</p><p>四</p><p>五</p><p>六</p><p>日</p>
+			</div>
+			<div class="body">
+			</div>
+		</div>
+	</div>
+	<div id="dock-box">
+		<!-- Dock(任务)栏 -->
+		<div class="dock dock-start">
+			<a class="dock-btn" id="start-btn" win12_title="开始" onclick="
+				if($('#start-menu').hasClass('show')){
+					hide_startmenu();
+				}
+				else{
+					$('#start-btn').addClass('show');
+					if($('#search-win').hasClass('show')){
+						$('#search-btn').removeClass('show');
+						$('#search-win').removeClass('show');
+						setTimeout(() => {
+							$('#search-win').removeClass('show-begin');
+						}, 200);
+						hide_widgets();
+					}
+					if($('#widgets').hasClass('show'))hide_widgets();
+					$('#start-menu').addClass('show-begin');
+					setTimeout(() => {
+						$('#start-menu').addClass('show');
+					}, 0);
+				}" oncontextmenu="return showcm(event,'winx',null)">
+				<!-- 开始按钮 -->
+				<svg class="menu" viewBox="0,0,440,439" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+					overflow="hidden">
+					<defs>
+						<clipPath id="clip-start1">
+							<rect x="134" y="59" width="440" height="439" />
+						</clipPath>
+					</defs>
+					<g clip-path="url(#clip-start1)" transform="translate(-134 -59)">
+						<path
+							d="M233.479 67.5001 475.521 67.5001C525.767 67.5001 566.5 108.233 566.5 158.479L566.5 490.5 142.5 490.5 142.5 158.479C142.5 108.233 183.233 67.5001 233.479 67.5001Z"
+							stroke="#7F7F7F" stroke-width="14.6667" stroke-linecap="round" stroke-miterlimit="8" fill="#A6A6A6"
+							fill-rule="evenodd" style="fill: var(--bg70);"/>
+						<path d="M208.5 132.5 334.716 132.5" stroke="#888" stroke-width="14.6667" stroke-linecap="round"
+							stroke-miterlimit="8" fill="none" fill-rule="evenodd" />
+						<path d="M208.5 175.5 386.34 175.5" stroke="#888" stroke-width="14.6667" stroke-linecap="round"
+							stroke-miterlimit="8" fill="none" fill-rule="evenodd" />
+						<path d="M208.5 221.5 271.608 221.5" stroke="#888" stroke-width="14.6667" stroke-linecap="round"
+							stroke-miterlimit="8" fill="none" fill-rule="evenodd" />
+					</g>
+				</svg>
+				
+				<svg class="ico" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26" height="26" viewBox="0,0,306,305"><defs><clipPath id="clip0"><rect x="897" y="208" width="306" height="305"></rect>
+					</clipPath><linearGradient x1="885.371" y1="221.859" x2="1214.63" y2="498.141" gradientUnits="userSpaceOnUse" spreadMethod="reflect" id="sf1">
+						<stop offset="0" stop-color="#A964C8"></stop><stop offset="0.18" stop-color="#A964C8"></stop><stop offset="0.36" stop-color="#A266E4"></stop>
+						<stop offset="0.73" stop-color="#346ED8"></stop><stop offset="0.91" stop-color="#2D8AD5"></stop><stop offset="1" stop-color="#2D8AD5"></stop>
+					</linearGradient><linearGradient x1="317.629" y1="13.8595" x2="-11.6295" y2="290.141" gradientUnits="userSpaceOnUse" spreadMethod="reflect" id="sf2">
+						<stop offset="0" stop-color="#A964C8"></stop><stop offset="0.18" stop-color="#A964C8"></stop><stop offset="0.36" stop-color="#A266E4"></stop>
+						<stop offset="0.73" stop-color="#346ED8"></stop><stop offset="0.91" stop-color="#2D8AD5"></stop><stop offset="1" stop-color="#2D8AD5"></stop>
+					</linearGradient><linearGradient x1="885.371" y1="221.859" x2="1214.63" y2="498.141" gradientUnits="userSpaceOnUse" spreadMethod="reflect" id="sf3">
+						<stop offset="0" stop-color="#A964C8"></stop><stop offset="0.18" stop-color="#A964C8"></stop><stop offset="0.36" stop-color="#A266E4"></stop>
+						<stop offset="0.73" stop-color="#346ED8"></stop><stop offset="0.91" stop-color="#2D8AD5"></stop><stop offset="1" stop-color="#2D8AD5"></stop>
+					</linearGradient><linearGradient x1="-11.6295" y1="290.141" x2="317.629" y2="13.8595" gradientUnits="userSpaceOnUse" spreadMethod="reflect" id="sf4">
+						<stop offset="0" stop-color="#A964C8"></stop><stop offset="0.18" stop-color="#A964C8"></stop><stop offset="0.36" stop-color="#A266E4"></stop>
+						<stop offset="0.73" stop-color="#346ED8"></stop><stop offset="0.91" stop-color="#2D8AD5"></stop><stop offset="1" stop-color="#2D8AD5"></stop>
+					</linearGradient></defs><g clip-path="url(#clip0)" transform="translate(-897 -208)">
+						<path d="M936.813 208 1035.2 208 1035.2 208 1036 340.407C1011.65 331.352 986.507 325.493 963.762 325.226 941.508 325.759 919.254 339.075 897 346L897 247.755C897 225.799 914.825 208 936.813 208Z" fill="url(#sf1)" fill-rule="evenodd"></path>
+						<path d="M40.0431 0 139 0 139 0 139 140.549C115.82 150.681 92.6407 159.212 69.4611 158.946 45.5026 160.012 23.1537 145.082 0 138.15L0 39.7981C0 17.8182 17.9278 0 40.0431 0Z" fill="url(#sf2)" fill-rule="evenodd" transform="matrix(-1 0 0 1 1203 208)"></path>
+						<path d="M1163.19 512 1064.8 512 1064.8 512 1064 379.593C1088.35 388.648 1113.49 394.507 1136.24 394.774 1158.49 394.241 1180.75 380.925 1203 374L1203 472.245C1203 494.201 1185.18 512 1163.19 512Z" fill="url(#sf3)" fill-rule="evenodd"></path>
+						<path d="M39.755 0 138 0 138 0 138 140.549C114.987 150.681 91.9742 159.212 68.9614 158.946 45.1752 160.012 22.9872 145.082 0 138.15L0 39.7981C0 17.8182 17.7989 0 39.755 0Z" fill="url(#sf4)" fill-rule="evenodd" transform="matrix(1 -1.22465e-16 -1.22465e-16 -1 897 512)"></path>
+					</g></svg></a>
+			<a class="dock-btn" id="search-btn" win12_title="搜索" onclick="
+			if($('#search-win').hasClass('show')){
+				$('#search-btn').removeClass('show');
+				$('#search-win').removeClass('show');
+				setTimeout(() => {
+					$('#search-win').removeClass('show-begin');
+				}, 200);
+			}
+			else{
+				$('#search-btn').addClass('show');
+				if($('#start-menu').hasClass('show'))hide_startmenu();
+				if($('#widgets').hasClass('show'))hide_widgets();
+				$('#search-win').addClass('show-begin');
+				setTimeout(() => {
+					$('#search-win').addClass('show');
+				}, 0);
+				$('#search-input').focus();
+			}">
+				<svg class="out" width="26" height="26" viewBox="0,0,398,406" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden"><defs><clipPath id="clip-search0"><rect x="77" y="29" width="398" height="406"/></clipPath></defs><g clip-path="url(#clip-search0)" transform="translate(-77 -29)"><path style="fill: var(--text);filter:brightness(0.9);" d="M77 195C77 103.873 151.097 30 242.5 30 333.903 30 408 103.873 408 195 408 286.127 333.903 360 242.5 360 151.097 360 77 286.127 77 195ZM122.372 195C122.372 261.069 176.155 314.629 242.5 314.629 308.845 314.629 362.628 261.069 362.628 195 362.628 128.931 308.845 75.3717 242.5 75.3717 176.155 75.3717 122.372 128.931 122.372 195Z" fill-rule="evenodd"/><path style="fill: var(--text);filter:brightness(0.9);" d="M329.14 331.039C317.792 319.691 317.792 301.292 329.14 289.944L329.14 289.944C340.488 278.596 358.887 278.596 370.235 289.944L465.351 385.06C476.699 396.408 476.699 414.807 465.351 426.155L465.351 426.155C454.003 437.503 435.604 437.503 424.256 426.155Z" fill-rule="evenodd"/></g></svg>
+				<svg class="in" width="20" height="20" viewBox="0,0,245,245" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden"><defs><clipPath id="clip-search1"><rect x="121" y="76" width="245" height="245"/></clipPath><linearGradient x1="99.764" y1="115.514" x2="387.236" y2="281.486" gradientUnits="userSpaceOnUse" spreadMethod="reflect" id="fill-search1"><stop offset="0" stop-color="#A964C8"/><stop offset="0.26" stop-color="#A964C8"/><stop offset="1" stop-color="#2D8AD5"/></linearGradient></defs><g clip-path="url(#clip-search1)" transform="translate(-121 -76)"><path d="M122 198.5C122 131.397 176.397 77 243.5 77 310.603 77 365 131.397 365 198.5 365 265.603 310.603 320 243.5 320 176.397 320 122 265.603 122 198.5Z" fill="url(#fill-search1)" fill-rule="evenodd"/></g></svg>
+			</a>
+			<a class="dock-btn" id="widgets-btn" win12_title="小组件" onclick="
+			if($('#widgets').hasClass('show')){
+				hide_widgets();
+			}
+			else{
+				$('#widgets-btn').addClass('show');
+				if($('#search-win').hasClass('show')){
+					$('#search-btn').removeClass('show');
+					$('#search-win').removeClass('show');
+					setTimeout(() => {
+						$('#search-win').removeClass('show-begin');
+					}, 200);
+				}
+				if($('#start-menu').hasClass('show'))hide_startmenu();
+				$('#widgets').addClass('show-begin');
+				setTimeout(() => {
+					$('#widgets').addClass('show');
+				}, 0);
+				$('#widgets-input').focus();
+			}">
+				<svg viewBox="0,0,464,464" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden" class="wid1"><defs><clipPath id="wid1-clip0"><rect x="655" y="70" width="464" height="464"/></clipPath><linearGradient x1="613.849" y1="144.008" x2="1161.15" y2="459.992" gradientUnits="userSpaceOnUse" spreadMethod="reflect" id="wid1-fill1"><stop offset="0" stop-color="#A964C8"/><stop offset="0.26" stop-color="#A964C8"/><stop offset="1" stop-color="#2D8AD5"/></linearGradient></defs><g clip-path="url(#wid1-clip0)" transform="translate(-655 -70)"><path d="M656 187.928C656 123.35 708.35 71 772.928 71L1002.07 71C1066.65 71 1119 123.35 1119 187.928L1119 416.072C1119 480.65 1066.65 533 1002.07 533L772.928 533C708.35 533 656 480.65 656 416.072Z" fill="url(#wid1-fill1)" fill-rule="evenodd"/></g></svg>
+				<svg viewBox="0,0,207,226" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden" class="wid2"><defs><clipPath id="wid2-clip0"><rect x="316" y="202" width="207" height="226"/></clipPath><linearGradient x1="344.945" y1="185.866" x2="494.055" y2="444.134" gradientUnits="userSpaceOnUse" spreadMethod="reflect" id="wid2-fill1"><stop offset="0" stop-color="#11CCF1"/><stop offset="0.13" stop-color="#11CCF1"/><stop offset="1" stop-color="#2983CC"/></linearGradient></defs><g clip-path="url(#wid2-clip0)" transform="translate(-316 -202)"><path d="M317 260.165C317 228.041 343.041 202 375.165 202L463.835 202C495.959 202 522 228.041 522 260.165L522 369.835C522 401.959 495.959 428 463.835 428L375.165 428C343.041 428 317 401.959 317 369.835Z" fill="url(#wid2-fill1)" fill-rule="evenodd"/><path d="M349.5 249.5 393.5 249.5" stroke="#FFFFFF" stroke-width="14.6667" stroke-linecap="round" stroke-miterlimit="8" fill="none" fill-rule="evenodd"/><path d="M349.5 286.5 464.5 286.5" stroke="#FFFFFF" stroke-width="14.6667" stroke-linecap="round" stroke-miterlimit="8" fill="none" fill-rule="evenodd"/><path d="M349.5 323.5 422.5 323.5" stroke="#FFFFFF" stroke-width="14.6667" stroke-linecap="round" stroke-miterlimit="8" fill="none" fill-rule="evenodd"/></g></svg>
+				<svg viewBox="0,0,180,394" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden" class="wid3"><defs><clipPath id="wid3-clip0"><rect x="111" y="202" width="180" height="394"/></clipPath><linearGradient x1="93.038" y1="212.37" x2="307.962" y2="584.63" gradientUnits="userSpaceOnUse" spreadMethod="reflect" id="wid3-fill1"><stop offset="0" stop-color="#E062D7"/><stop offset="0.13" stop-color="#E062D7"/><stop offset="1" stop-color="#A266E4"/></linearGradient></defs><g clip-path="url(#wid3-clip0)" transform="translate(-111 -202)"><path d="M111 265.803C111 230.565 139.565 202 174.803 202L226.197 202C261.435 202 290 230.565 290 265.803L290 531.197C290 566.435 261.435 595 226.197 595L174.803 595C139.565 595 111 566.435 111 531.197Z" fill="url(#wid3-fill1)" fill-rule="evenodd"/><path d="M144.5 250.5 217.5 250.5" stroke="#FFFFFF" stroke-width="14.6667" stroke-linecap="round" stroke-miterlimit="8" fill="none" fill-rule="evenodd"/><path d="M144.5 287.5 184.246 287.5" stroke="#FFFFFF" stroke-width="14.6667" stroke-linecap="round" stroke-miterlimit="8" fill="none" fill-rule="evenodd"/><path d="M144.5 324.5 230.931 324.5" stroke="#FFFFFF" stroke-width="14.6667" stroke-linecap="round" stroke-miterlimit="8" fill="none" fill-rule="evenodd"/></g></svg>
+				<svg viewBox="0,0,206,152" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden" class="wid4"><defs><clipPath id="wid4-clip0"><rect x="317" y="444" width="206" height="152"/></clipPath><linearGradient x1="361.399" y1="419.366" x2="477.601" y2="620.634" gradientUnits="userSpaceOnUse" spreadMethod="reflect" id="wid4-fill1"><stop offset="0" stop-color="#D854CB"/><stop offset="0.13" stop-color="#D854CB"/><stop offset="1" stop-color="#A266E4"/></linearGradient></defs><g clip-path="url(#wid4-clip0)" transform="translate(-317 -444)"><path d="M317 498.466C317 468.938 340.938 445 370.466 445L468.534 445C498.062 445 522 468.938 522 498.466L522 541.534C522 571.062 498.062 595 468.534 595L370.466 595C340.938 595 317 571.062 317 541.534Z" fill="url(#wid4-fill1)" fill-rule="evenodd"/><path d="M356.5 548.5C370.917 521.094 385.333 493.688 400.5 492.521 415.667 491.355 434 538.837 447.5 541.503 461 544.168 479.417 520.386 481.5 508.515" stroke="#FFFFFF" stroke-width="14.6667" stroke-linecap="round" stroke-miterlimit="8" fill="none" fill-rule="evenodd"/></g></svg>
+			</a>
+		</div>
+		<div class="dock" id="taskbar" style="display: none;" count="0">
+		</div>
+		<div class="dock about" oncontextmenu="return showcm(event,'dockabout',$(this).hasClass('show'))"
+			onclick="if($(this).hasClass('show')){$(this).removeClass('show')}else{$(this).addClass('show')};" win12_title="点击展开详细">
+			Windows 12 网页版 谭景元原创
+			<p>Windows 12 网页版是一个开放源项目,<br>
+				希望让用户在网络上预先体验 Windows 12,<br>
+				内容可能与 Windows 12 正式版本不一致。<br>
+				使用标准网络技术,例如 HTML, CSS 和 JS<br>
+				此项目绝不附属于微软,且不应与微软操作系统或产品混淆,<br>
+				这也不是 Windows365 cloud PC<br>
+				本项目中微软、Windows和其他示范产品是微软公司的商标</p>
+		</div>
+		<div class="a dock theme" win12_title="切换主题" onclick="toggletheme()">
+			<svg viewBox="0,0,307,307" class="light" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden"><defs><clipPath id="theme-light-clip0"><rect x="79" y="77" width="307" height="307"/></clipPath><linearGradient x1="128.499" y1="49.9991" x2="337.501" y2="412.001" gradientUnits="userSpaceOnUse" spreadMethod="reflect" id="theme-light-fill1"><stop offset="0" stop-color="#FFC567"/><stop offset="0.18" stop-color="#FFC567"/><stop offset="0.8" stop-color="#EE54F2"/></linearGradient></defs><g clip-path="url(#theme-light-clip0)" transform="translate(-79 -77)"><path d="M80 231C80 146.5 148.5 78 233 78 317.5 78 386 146.5 386 231 386 315.5 317.5 384 233 384 148.5 384 80 315.5 80 231Z" fill="url(#theme-light-fill1)" fill-rule="evenodd"/></g></svg>
+			<svg viewBox="0,0,275,294" class="dark" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden"><defs><clipPath id="theme-dark-clip0"><rect x="525" y="230" width="275" height="294"/></clipPath><linearGradient x1="599.492" y1="203.887" x2="725.508" y2="550.113" gradientUnits="userSpaceOnUse" spreadMethod="reflect" id="theme-dark-fill1"><stop offset="0" stop-color="#2474B6"/><stop offset="0.42" stop-color="#2474B6"/><stop offset="0.98" stop-color="#FFD966"/><stop offset="1" stop-color="#FFD966"/></linearGradient></defs><g clip-path="url(#theme-dark-clip0)" transform="translate(-525 -230)"><path d="M635.002 236.062C638.664 240.491 639.245 246.694 636.469 251.721 625.869 271.094 620.334 292.809 620.372 314.869 620.372 388.255 680.469 447.679 754.537 447.679 764.199 447.679 773.604 446.675 782.643 444.759 788.307 443.538 794.156 445.809 797.493 450.526 801.036 455.459 800.803 462.148 796.925 466.824 767.803 502.434 724.103 523.073 677.976 523 593.458 523 525 455.217 525 371.701 525 308.846 563.757 254.933 618.942 232.083 624.588 229.708 631.132 231.329 635.002 236.062Z" fill="url(#theme-dark-fill1)" fill-rule="evenodd"/></g></svg>
+		</div>
+		<div class="a dock date" onclick="if($('#datebox').hasClass('show')){
+			$('.dock.date').removeClass('show');
+			$('#datebox').removeClass('show');
+			setTimeout(() => {
+				$('#datebox').removeClass('show-begin');
+			}, 200);
+		}
+		else{
+			$('.dock.date').addClass('show');
+			$('#datebox').css('left',$(this).position().left-125);
+			$('#datebox').addClass('show-begin');
+			setTimeout(() => {
+				$('#datebox').addClass('show');
+			}, 0);
+		}">
+			<p class="time">12:34:56</p>
+			<p class="date">2022/10/01</p>
+			<i class="bi bi-chevron-down"></i>
+		</div>
+	</div>
+	<div id="desktop" oncontextmenu="return showcm(event,'desktop',null)">
+		<div ondblclick="openapp('explorer');" ontouchstart="openapp('explorer');" win12_title="显示连接到此计算机的驱动器和硬件。">
+			<img src="apps/icons/explorer/thispc.png">
+			<p>此电脑</p>
+		</div>
+		<div class="b" ondblclick="openapp('setting');" ontouchstart="openapp('setting');">
+			<img src="icon/setting.png">
+			<p>设置</p>
+		</div>
+		<div class="b" ondblclick="openapp('about');" ontouchstart="openapp('about');">
+			<img src="icon/about.png">
+			<p>关于 Win12 网页版</p>
+		</div>
+		<div class="b" ondblclick="openapp('edge');" ontouchstart="openapp('edge');">
+			<img src="icon/edge.png">
+			<p>Microsoft Edge</p>
+		</div>
+		<span class="choose">
+		</span>
+	</div>
+	<div id="cm">
+		<input class="foc">
+		<list>
+		</list>
+	</div>
+	<div id="dp">
+		<list>
+		</list>
+	</div>
+	<div id="descp">
+
+	</div>
+	<div id="window-fill"></div>
+	<div class="window setting" onmousedown="focwin('setting')" ontouchstart="focwin('setting')">
+		<div class="titbar" oncontextmenu="return showcm(event,'titbar','setting')" ondblclick="maxwin('setting')">
+			<img src="icon/setting.png" class="icon"><p>设置</p>
+			<div>
+				<a class="a wbtg red" onclick="hidewin('setting')"><i class="bi bi-x-lg"></i></a>
+				<a class="a wbtg max" onclick="maxwin('setting')"><i class="bi bi-app"></i></a>
+				<a class="a wbtg" onclick="minwin('setting')"><i class="bi bi-dash-lg"></i></a>
+			</div>
+		</div>
+		<div class="loadback">
+			<img src="icon/setting.png" class="icon">
+		</div>
+		<div class="content" id="win-setting">
+			<div class="menu">
+				<a class="a user">
+					<svg viewBox="0,0,257,344" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden"><defs><clipPath id="user-clip1"><rect x="382" y="195" width="257" height="344"/></clipPath><linearGradient x1="351.462" y1="233.56" x2="669.496" y2="500.422" gradientUnits="userSpaceOnUse" spreadMethod="reflect" id="user-fill3"><stop offset="0" stop-color="#A964C8"/><stop offset="0.35" stop-color="#A964C8"/><stop offset="0.87" stop-color="#2D8AD5"/><stop offset="1" stop-color="#2D8AD5"/></linearGradient><linearGradient x1="351.462" y1="233.56" x2="669.496" y2="500.422" gradientUnits="userSpaceOnUse" spreadMethod="reflect" id="user-fill4"><stop offset="0" stop-color="#A964C8"/><stop offset="0.35" stop-color="#A964C8"/><stop offset="0.87" stop-color="#2D8AD5"/><stop offset="1" stop-color="#2D8AD5"/></linearGradient></defs><g clip-path="url(#user-clip1)" transform="translate(-382 -195)"><path d="M637.755 433.872C642.215 515.221 579.577 537.983 508.011 537.983 436.444 537.983 376.676 507.833 383.513 437.11 383.109 425.234 389.59 414.133 398.634 409.891 413.82 402.768 444.753 402.936 507.484 402.997 570.214 403.058 609.164 402.279 621.521 407.947 633.878 413.614 638.011 424.609 637.755 433.872Z" fill="url(#user-fill3)" fill-rule="evenodd"/><path d="M422 285C422 235.847 461.623 196 510.5 196 559.377 196 599 235.847 599 285 599 334.153 559.377 374 510.5 374 461.623 374 422 334.153 422 285Z" fill="url(#user-fill4)" fill-rule="evenodd"/></g></svg>
+					<div>
+						<p>瓶盖</p>
+						<p>tanjingyuan@win12.com</p>
+					</div>
+				</a>
+				<input type="text" class="input" placeholder="查找设置" style="padding-left: 30px;">
+				<input-before class="bi bi-search"></input-before>
+				<list class="focs">
+					<a class="enable system check" onclick="apps.setting.page('system')"><img src="apps/icons/setting/system.png">系统</a>
+					<a><img src="apps/icons/setting/blueteeth.png">蓝牙和其他设备</a>
+					<a><img src="apps/icons/setting/network.png">网络和 Internet</a>
+					<a class="enable appearance" onclick="apps.setting.page('appearance')"><img src="apps/icons/setting/personal.png">个性化</a>
+					<a><img src="apps/icons/setting/apps.png">应用</a>
+					<a><img src="apps/icons/setting/user.png">账户</a>
+					<a><img src="apps/icons/setting/time.png">时间和语言</a>
+					<a><img src="apps/icons/setting/game.png">游戏</a>
+					<a><img src="apps/icons/setting/help.png">辅助功能</a>
+					<a><img src="apps/icons/setting/safe.png">隐私和安全性</a>
+					<a><img src="apps/icons/setting/update.png">Windows 更新</a>
+					<span class="focs"></span>
+				</list>
+			</div>
+			<div class="page">
+				<div class="cnt system show">
+					<p class="title">系统</p>
+					<div style="display: flex;">
+						<p class="s-icon" style="font-size: 70px;margin: -8px 10px 0px 20px;"></p>
+						<div>
+							<p style="font-size: 28px;text-overflow: ellipsis;white-space: nowrap;">Desktop-PingGai</p>
+							<p style="color: #7f7f7f;margin:-8px 0 -5px 0;">瓶盖</p>
+							<a style="color: var(--href);text-decoration: underline !important;;" class="a">重命名</a>
+						</div>
+					</div>
+					<div class="setting-list">
+						<a><icon></icon><div><p>显示</p><p>显示器、亮度、夜间模式、显示描述</p></div><i class="bi bi-chevron-right"></i></a>
+						<a><icon></icon><div><p>声音</p><p>声音级别、输入、输出、声音设备</p></div><i class="bi bi-chevron-right"></i></a>
+						<a><icon></icon><div><p>通知</p><p>来自系统和应用的警报</p></div><i class="bi bi-chevron-right"></i></a>
+						<a><icon></icon><div><p>专注助手</p><p>通知、自动规则</p></div><i class="bi bi-chevron-right"></i></a>
+						<a><icon class="b">&#xF186;</icon><div><p>电源</p><p>睡眠、电池使用情况、节电模式</p></div><i class="bi bi-chevron-right"></i></a>
+						<a><icon></icon><div><p>存储</p><p>存储空间、驱动器、配置规则</p></div><i class="bi bi-chevron-right"></i></a>
+						<a><icon></icon><div><p>多任务处理</p><p>贴靠窗口、桌面、任务切换</p></div><i class="bi bi-chevron-right"></i></a>
+						<a><icon></icon><div><p>激活</p><p>激活状态、订阅、产品密钥</p></div><i class="bi bi-chevron-right"></i></a>
+						<a><icon></icon><div><p>疑难解答</p><p>建议的疑难解答、首选项和历史记录</p></div><i class="bi bi-chevron-right"></i></a>
+						<a><icon></icon><div><p>恢复</p><p>重置、高级启动、返回</p></div><i class="bi bi-chevron-right"></i></a>
+						<a><icon></icon><div><p>投影到此电脑</p><p>权限、配对 PIN、可发现性</p></div><i class="bi bi-chevron-right"></i></a>
+						<a><icon></icon><div><p>远程桌面</p><p>远程桌面用户、连接权限</p></div><i class="bi bi-chevron-right"></i></a>
+						<a><icon></icon><div><p>剪贴板</p><p>剪贴和复制历史记录、同步、清除</p></div><i class="bi bi-chevron-right"></i></a>
+						<a><icon></icon><div><p>关于</p><p>设备规格、重命名电脑、Windows 规格</p></div><i class="bi bi-chevron-right"></i></a>
+					</div>
+				</div>
+				<div class="cnt appearance">
+					<p class="title">个性化</p>
+					<div class="setting-list" style="margin-top: 10px;">
+						<a class="dp app-color" onclick="$('.dp.app-color').toggleClass('show');"><icon></icon><div><p>颜色</p><p>设置 Windows 的主题色</p></div><i class="bi bi-chevron-down"></i></a>
+						<div class="dp app-color">
+							<p>当前颜色</p>
+							<div class="color" style="background: linear-gradient(120deg,var(--theme-1),var(--theme-2));"></div>
+							<br>
+							<p>自定义颜色</p>
+							<div style="display: flex;">
+								<div class="a act color theme1" style="background: #47acff" onclick="$('div.app-color>div>input.theme1inp')[0].click();"></div>
+								<input type="color" class="theme1inp" onchange="$('div.app-color>div>.color.theme1').css('background-color',this.value);" value="#47acff">
+								<div style="width: 10px;height: 1px;background-color: var(--text);margin: 17px 5px 0 10px;"></div>
+								<div class="a act color theme2" style="background: #1168ae" onclick="$('div.app-color>div>input.theme2inp')[0].click();"></div>
+								<input type="color" class="theme2inp" onchange="$('div.app-color>div>.color.theme2').css('background-color',this.value);" value="#1168ae">
+								<a class="a button" style="margin-left: 20px;" onclick="$(':root').css('--theme-1',$('div.app-color>div>input.theme1inp').val());
+									$(':root').css('--theme-2',$('div.app-color>div>input.theme2inp').val());setData('color1',$('div.app-color>div>input.theme1inp').val());
+									setData('color2',$('div.app-color>div>input.theme2inp').val())">应用</a>
+							</div>
+						</div>
+						<div class="border-radius"><icon></icon><div><p>圆角</p><p>设置系统界面中是否启用圆角</p></div>
+							<div class="alr">
+								<a class="a checkbox checked" onclick="$(this).toggleClass('checked');$(':root').toggleClass('nobr')"></a>
+							</div>
+						</div>
+						<div class="border-radius"><icon></icon><div><p>动画</p><p>系统界面元素过渡动画</p></div>
+							<div class="alr">
+								<a class="a checkbox checked" onclick="$(this).toggleClass('checked');$(':root').toggleClass('notrans')"></a>
+							</div>
+						</div>
+						<div class="border-radius"><icon></icon><div><p>阴影</p><p>为系统界面元素添加阴影效果</p></div>
+							<div class="alr">
+								<a class="a checkbox checked" onclick="$(this).toggleClass('checked');$(':root').toggleClass('nosd')"></a>
+							</div>
+						</div>
+						<div class="border-radius"><icon></icon><div><p>多窗口透明</p><p>为所有窗口开启透明效果，而不是仅用于焦点窗口(开启后窗口的拖拽操作可能卡顿)</p></div>
+							<div class="alr">
+								<a class="a checkbox" onclick="$(this).toggleClass('checked');$(':root').toggleClass('moreblur')"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<div class="window explorer"  onmousedown="focwin('explorer')" ontouchstart="focwin('explorer')">
+		<div class="titbar" oncontextmenu="return showcm(event,'titbar','explorer')" ondblclick="maxwin('explorer')">
+			<img src="icon/explorer.png" class="icon">
+			<p>文件资源管理器</p>
+			<div>
+				<a class="a wbtg red" onclick="hidewin('explorer')"><i class="bi bi-x-lg"></i></a>
+				<a class="a wbtg max" onclick="maxwin('explorer')"><i class="bi bi-app"></i></a>
+				<a class="a wbtg" onclick="minwin('explorer')"><i class="bi bi-dash-lg"></i></a>
+			</div>
+		</div>
+		<div class="loadback">
+			<img src="icon/explorer.png" class="icon">
+		</div>
+		<div class="content" id="win-explorer">
+			<div class="menu">
+				<div class="card pinned">
+					<p class="title"><span style="font: 15px;">📌</span> 已固定</p>
+					<list>
+						<a><img src="apps/icons/explorer/qa.png">快速访问</a>
+						<a><img src="apps/icons/explorer/od.png">OneDrive</a>
+						<a class="check" onclick="apps.explorer.reset();"><span
+							style="background:linear-gradient(180deg, var(--theme-1), var(--theme-2));width:4px;height: 19px;border-radius: 10px;margin-left: -12px;margin-right: 8px;margin-top: 1px;"></span>
+							<img src="apps/icons/explorer/thispc.png">此电脑</a>
+						<a><img src="apps/icons/explorer/rb.png">回收站</a>
+					</list>
+				</div>
+				<div class="card tags">
+					<p class="title"><span style="font: 15px;">🏷</span> 标签</p>
+					<list>
+						<a><span style="background-color: red;"></span>红色</a>
+						<a><span style="background-color: #3981d9;"></span>蓝色</a>
+						<a><span style="background-color: yellow;"></span>黄色</a>
+						<a><span style="background-color: green;"></span>绿色</a>
+						<a><span style="background-color: #fc9816;"></span>橙色</a>
+						<a><span style="background-color: purple;"></span>紫色</a>
+						<a><span style="background-color: #ffcad4;"></span>粉色</a>
+					</list>
+				</div>
+			</div>
+			<div class="main">
+				<div class="tool">
+					<a class="a b t act"><img src="apps/icons/explorer/tool-new.png">新建</a><div class="hr"></div>
+					<a class="a b act"><img src="apps/icons/explorer/tool-cut.png"></a>
+					<a class="a b act"><img src="apps/icons/explorer/tool-copy.png"></a>
+					<a class="a b act"><img src="apps/icons/explorer/tool-paste.png"></a>
+					<a class="a b act"><img src="apps/icons/explorer/tool-rename.png"></a><div class="hr"></div>
+					<a class="a b t act"><img src="apps/icons/explorer/tool-sort.png">排序方式</a>
+					<a class="a b t act"><img src="apps/icons/explorer/tool-view.png">布局</a>
+				</div>
+				<div class="content" oncontextmenu="return showcm(event,'explorer.content',null);">
+					<div class="tool">
+						<a class="a btn btn-icon" style="filter: contrast(0.5);"><i class="bi bi-arrow-left"></i></a>
+						<a class="a btn btn-icon" style="filter: contrast(0.5);"><i class="bi bi-arrow-right"></i></a>
+						<a class="a btn btn-icon goback"><i class="bi bi-arrow-up"></i></a>
+						<p class="tit">此电脑</p>
+						<div class="search">
+							<input type="text" class="input" placeholder="在这里输入你要搜索的内容">
+							<input-before class="bi bi-search"></input-before>
+						</div>
+					</div>
+					<div class="view">
+						<!-- 文件列表  -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="window calc" onmousedown="focwin('calc')" ontouchstart="focwin('calc')">
+		<div class="titbar" oncontextmenu="return showcm(event,'titbar','calc')">
+			<img src="icon/calc.png" class="icon">
+			<p>计算器</p>
+			<div>
+				<a class="a wbtg red" onclick="hidewin('calc')"><i class="bi bi-x-lg"></i></a>
+				<a class="a wbtg max" style="pointer-events: none;color: #777;"><i class="bi bi-app"></i></a>
+				<a class="a wbtg" onclick="minwin('calc')"><i class="bi bi-dash-lg"></i></a>
+			</div>
+		</div>
+		<div class="loadback">
+			<img src="icon/calc.png" class="icon">
+		</div>
+		<div class="content" id="win-calc">
+			<input id="calc-input" value="" onkeydown="if(event.keyCode == 13)$('#win-calc>.keyb>.ans').click()">
+			<div class="keyb">
+				<a class="a b" onclick="$('#calc-input')[0].value*=$('#calc-input').val()">𝑥²</a>
+				<a class="a b" onclick="$('#calc-input').val(Math.sqrt($('#calc-input').val()))">√𝑥</a>
+				<a class="a b" onclick="$('#calc-input')[0].value=''">C</a>
+				<a class="a b u" onclick="apps.calc.add('+')">+</a>
+				<a class="a b" onclick="apps.calc.add('7')">7</a>
+				<a class="a b" onclick="apps.calc.add('8')">8</a>
+				<a class="a b" onclick="apps.calc.add('9')">9</a>
+				<a class="a b u" onclick="apps.calc.add('-')">-</a>
+				<a class="a b" onclick="apps.calc.add('4')">4</a>
+				<a class="a b" onclick="apps.calc.add('5')">5</a>
+				<a class="a b" onclick="apps.calc.add('6')">6</a>
+				<a class="a b u" onclick="apps.calc.add('*')">×</a>
+				<a class="a b" onclick="apps.calc.add('1')">1</a>
+				<a class="a b" onclick="apps.calc.add('2')">2</a>
+				<a class="a b" onclick="apps.calc.add('3')">3</a>
+				<a class="a b u" onclick="apps.calc.add('/')">÷</a>
+				<a class="a b" onclick="apps.calc.add('.')">.</a>
+				<a class="a b" onclick="apps.calc.add('0')">0</a>
+				<a class="a b" onclick="$('#calc-input').val($('#calc-input')[0].value.substring(0,$('#calc-input')[0].value.length-1));"><i class="bi bi-backspace"></i></a>
+				<a class="a b ans u" onclick="$('#calc-input')[0].value=eval($('#calc-input')[0].value)"> =</a>
+			</div>
+		</div>
+	</div>
+	<div class="window about"  onmousedown="focwin('about')" ontouchstart="focwin('about')">
+		<div class="titbar" oncontextmenu="return showcm(event,'titbar','about')" ondblclick="maxwin('about')">
+			<img src="icon/about.png" class="icon">
+			<p>关于 Windows12 网页版</p>
+			<div>
+				<a class="a wbtg red" onclick="hidewin('about')"><i class="bi bi-x-lg"></i></a>
+				<a class="a wbtg max" onclick="maxwin('about')"><i class="bi bi-app"></i></a>
+				<a class="a wbtg" onclick="minwin('about')"><i class="bi bi-dash-lg"></i></a>
+			</div>
+		</div>
+		<div class="loadback">
+			<img src="icon/about.png" class="icon">
+		</div>
+		<div class="content" id="win-about">
+			<div class="menu">
+				<list>
+					<a onclick="$('#win-about>.about').addClass('show');$('#win-about>.update').removeClass('show');"><img src="apps/icons/about/info.svg" height="17px" width="19px">简介</a>
+					<a onclick="$('#win-about>.update').addClass('show');$('#win-about>.about').removeClass('show');"><img src="apps/icons/about/update.svg" height="20px" width="18px">更新记录</a>
+				</list>
+			</div>
+			<div class="cnt about">
+				<h1 class="tit"><span></span>Windows 12 网页版</h1>
+				<div style="margin-left: 20px;">
+					<h2 class="tit"><span></span>简介</h2>
+					<p>&emsp;&emsp;Windows 12 网页版是一个开源项目, 由谭景元原创, 使用 Html,css,js , 在网络上模拟、创新操作系统</p>
+					<p>&emsp;&emsp;此项目已发布至 Github, <a onclick="window.open('https://github.com/tjy-gitnub/win12','_blank');" win12_title="https://github.com/tjy-gitnub/win12" class="jump">点击此处查看</a></p>
+					<p>&emsp;&emsp;若您对于该项目有任何意见或建议，请在 Github 上<a onclick="window.open('https://github.com/tjy-gitnub/win12/issues','_blank');" win12_title="https://github.com/tjy-gitnub/win12/issues" class="jump">提交 issues</a>, 您的问题会被尽可能快地解决</p>
+					<p>&emsp;&emsp;原创作者谭景元，点击以<a onclick="window.open('https://tjy-gitnub.github.io/','_blank');" win12_title="https://tjy-gitnub.github.io/" class="jump">了解详细</a></p>
+					<h2 class="tit"><span></span>开源说明</h2>
+					<p>&emsp;&emsp;由于这是一个开源项目，你可以在任何媒介以任何形式复制、发行本作品。</p>
+					<p>&emsp;&emsp;你还可以对该项目进行修改、转换或以本作品为基础进行创作。</p>
+					<p>&emsp;&emsp;但您必须给出适当的署名，<strong>您必须提供创作者姓名、作品链接</strong>，同时标明是否对此作了修改。您可以用任何合理的方式来署名，但是不得以<strong>任何方式</strong>暗示许可方认可您或您的使用。</p>
+					<h2 class="tit"><span></span>贡献者</h2>
+					<p>感谢所有项目的贡献者 (实时数据(我也不知道这个贡献值是怎么算的))</p>
+					<div id="contri">
+						<loading>
+							<svg width="30px" height="30px" viewBox="0 0 16 16">
+								<circle cx="8px" cy="8px" r="7px" style="stroke:#7f7f7f50;fill:none;stroke-width:3px;"></circle>
+								<circle cx="8px" cy="8px" r="7px" style="stroke:#2983cc;stroke-width:3px;"></circle>
+							</svg>
+						</loading>
+					</div>
+					<h2 class="tit"><span></span>其它</h2>
+					<p>&emsp;&emsp;此项目基于目前 Windows 版本创造，与微软的 Windows 12 正式版本不一致。</p>
+					<p>&emsp;&emsp;此项目绝不附属于微软,且不应与微软操作系统或产品混淆, 这也不是 Windows365 cloud PC</p>
+					<p>&emsp;&emsp;本项目中微软、Windows和其他示范产品是微软公司的商标</p>
+				</div>
+			</div>
+			<div class="cnt update">
+				<h1 class="tit"><span></span>更新记录</h1>
+				<div style="margin-left: 20px;">
+					<details><summary><span>v5.0.2</span> 贡献与Edge标签页</summary><p>
+						&emsp;&emsp;-贡献:关于应用新增贡献者数据<br>
+						&emsp;&emsp;-新标签页:对深色模式的适配，较高安全限制浏览器的适配<br>
+						&emsp;&emsp;-标签页:新增标签页关闭动画<br>
+						&emsp;&emsp;-兼容性:系统控件的防误触<br>
+						&emsp;&emsp;-其它:细节优化和修复</p>
+					</details>
+					<details><summary><span>v5.0.1</span> 漏洞修复</summary><p>
+						<strong>更新由 @User782Tec 提供</strong><br>
+						&emsp;&emsp;-修复了 issues #67中的问题<br>
+						&emsp;&emsp;-修复了关闭所有Edge浏览器中的标签页后仍保留Edge浏览器的问题<br>
+						&emsp;&emsp;-完善Edge浏览器内输入内容的正则表达式匹配<br>
+						&emsp;&emsp;-略微修改Edge浏览器中输入框<br>
+						&emsp;&emsp;-新标签页<br>
+						&emsp;&emsp;-细节优化和修复</p>
+					</details>
+					<details><summary><span>v5.0.0</span> 新增Edge</summary><p>
+						<strong>🎉🎉项目在Github上突破✨100✨stars✨啦！🎊🎈</strong><br>
+						&emsp;&emsp;-新增:Microsoft Edge应用(可以在Edge应用中提出反馈与建议，谢谢)<br>
+						&emsp;&emsp;-新增:桌面拖动选择框(没什么大用)<br>
+						&emsp;&emsp;-返璞归真:取消列表悬停效果<br>
+						&emsp;&emsp;-丰富:在文件资源管理器中添加了一些文件<br>
+						&emsp;&emsp;-精简:减小动画数量和幅度<br>
+						&emsp;&emsp;-修复:关于记事本的另存为问题<br>
+						&emsp;&emsp;-彩蛋:你发现动态壁纸了吗？<br>
+						&emsp;&emsp;-其它:细节优化和修复</p>
+					</details>
+					<details><summary><span>v4.3.0</span> 其实我想发布成5.0版的</summary><p>
+						&emsp;&emsp;-搜索菜单重新设计<br>
+						&emsp;&emsp;-列表悬停立体效果(全局,深色模式可能会明显一点,灵感源于win11,大家可以帮忙找一个浅色模式的边框颜色)<br>
+						&emsp;&emsp;-新增鼠标悬停提示框(全局)<br>
+						&emsp;&emsp;-记事本全新设计与功能(向Word努力)<br>
+						&emsp;&emsp;-计算器新样式<br>
+						&emsp;&emsp;-新增多开亚克力设置<br>
+						&emsp;&emsp;-关于应用更新记录动画<br>
+						&emsp;&emsp;-文件资源管理器的新动画<br>
+						&emsp;&emsp;-桌面图标点击效果<br>
+						&emsp;&emsp;-修复设置的小竖条位置问题<br>
+						&emsp;&emsp;-新新闻<br>
+						&emsp;&emsp;-细节优化和修复</p>
+					</details>
+					<details><summary><span>v4.2.0</span> 外观整改</summary><p>
+						<a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__SDw7SZUQ0xGSTFTSjBKMVY2SFM5U1ZWNFc5NkU3Ry4u" class="jump">参与小调查，帮助改进项目</a><br>
+						&emsp;&emsp;-新的计算器外观<br>
+						&emsp;&emsp;-卡片外观优化<br>
+						&emsp;&emsp;-设置新增菜单前面的小竖线<br>
+						&emsp;&emsp;-右键菜单阴影特效<br>
+						&emsp;&emsp;-细节优化和修复</p>
+					</details>
+					<details><summary><span>v4.1.0</span> 新的设置项，新背景</summary><p>
+						&emsp;&emsp;-在设置中添加开关特效的选项<br>
+						&emsp;&emsp;-背景添加阴影效果<br>
+						&emsp;&emsp;-设置的一些动画效果<br>
+						&emsp;&emsp;-一些外观优化<br>
+						&emsp;&emsp;-细节优化和修复</p>
+					</details>
+					<details><summary><span>v4.0.0</span> 记录用户偏好,动画更新,新壁纸,分屏</summary><p>
+						&emsp;&emsp;-记录用户偏好设置(更新后不保留) @xqwcom<br>
+						&emsp;&emsp;-没错又是动画更新<br>
+						&emsp;&emsp;-开始/任务栏/右键菜单/列表/切换等全面动画升级<br>
+						&emsp;&emsp;-新壁纸(好看吗?)<br>
+						&emsp;&emsp;-拖动窗口至左右边缘分屏<br>
+						&emsp;&emsp;-细节优化和修复</p>
+					</details>
+					<details><summary><span>v3.9.0</span> 新增主题色设置功能，布局优化</summary><p>
+						&emsp;&emsp;<i>更新部分来源 @User782Tec 的pr</i><br>
+						&emsp;&emsp;-新增系统主题色设置功能<br>
+						&emsp;&emsp;-记事本字体选择布局优化<br>
+						&emsp;&emsp;-"关于"应用的改进<br>
+						&emsp;&emsp;-细节优化和修复</p>
+					</details>
+					<details><summary><span>v3.8.0</span> 记事本字体，窗口焦点逻辑改善</summary><p>
+						&emsp;&emsp;<i>更新主要来源 @User782Tec 的pr</i><br>
+						&emsp;&emsp;-详见<a href="https://github.com/tjy-gitnub/win12/pull/50">pull</a>中的详细<br>
+						&emsp;&emsp;-窗口焦点逻辑改善<br>
+						&emsp;&emsp;-细节优化和修复</p>
+					</details>
+					<details><summary><span>v3.7.0</span> 窗口最大化完善,让颜色更"喜庆"一点</summary><p>
+						&emsp;&emsp;<i>更新部分来源 @User782Tec 的pr</i><br>
+						&emsp;&emsp;-增加最大化窗口下拖还原功能<br>
+						&emsp;&emsp;-最大化窗口还原后保留之前的位置<br>
+						&emsp;&emsp;-让系统的色调更"喜庆"一点<br>
+						&emsp;&emsp;-增加 @iamkezo1 提供的新闻<br>
+						&emsp;&emsp;-压缩背景图片加速<br>
+						&emsp;&emsp;-禁用缩放<br>
+						&emsp;&emsp;-细节优化和修复</p>
+					</details>
+					<details><summary><span>v3.6.1</span> Windows12新年特别版</summary><p>
+						&emsp;&emsp;-增加主题色控制功能<br>
+						&emsp;&emsp;-测试新的更新机制<br>
+						&emsp;&emsp;-细节优化和修复</p>
+					</details>
+					<details><summary><span>v3.6.0</span> 更新机制改进，新增office和终端</summary>
+						<p>&emsp;&emsp;-使用新的更新机制，更新速度提升<br>
+						&emsp;&emsp;-新增终端应用<br>
+						&emsp;&emsp;-新增Office<br>
+						&emsp;&emsp;-修改关机后黑屏而不是白屏<br>
+						&emsp;&emsp;-更新记录仅显示最近的，优化速度<br>
+						&emsp;&emsp;-细节优化和修复</p>
+					</details>
+				</div>
+				<a class="jump" win12_title="https://github.com/tjy-gitnub/win12/blob/main/update.md" onclick="window.open('https://github.com/tjy-gitnub/win12/blob/main/update.md','_blank')" style="text-align: center;display: block;margin-top: 5px;">更多</a>
+			</div>
+		</div>
+	</div>
+	<div class="window notepad"  onmousedown="focwin('notepad')" ontouchstart="focwin('notepad')">
+		<div class="titbar" oncontextmenu="return showcm(event,'titbar','notepad')" ondblclick="maxwin('notepad')">
+			<img src="icon/notepad.png" class="icon">
+			<p>记事本</p>
+			<div>
+				<a class="a wbtg red" onclick="hidewin('notepad');hidewin('notepad-fonts', 'configs')"><i class="bi bi-x-lg"></i></a>
+				<a class="a wbtg max" onclick="maxwin('notepad')"><i class="bi bi-app"></i></a>
+				<a class="a wbtg" onclick="minwin('notepad')"><i class="bi bi-dash-lg"></i></a>
+			</div>
+		</div>
+		<div class="loadback">
+			<img src="icon/notepad.png" class="icon">
+		</div>
+		<div class="content" id="win-notepad">
+			<div class="tool">
+				<a class="a" onmouseover="showdp(this,'notepad.file',null)" onmouseleave="hidedp()">文件</a>
+				<a class="a" onmouseover="showdp(this,'notepad.edit',null)" onmouseleave="hidedp()">编辑</a>
+				<a class="a" onmouseover="showdp(this,'notepad.view',null)" onmouseleave="hidedp()">格式</a>
+			</div>
+			<div class="text-box" contenteditable="true" spellcheck="false">
+				<p>Type here...</p>
+			</div>
+			<a href="" download="未命名.html" style="opacity: 0;" class="save">另存为</a>
+		</div>
+	</div>
+	<div class="window notepad-fonts" onmousedown="focwin('notepad-fonts')" ontouchstart="focwin('notepad-fonts')">
+		<div class="titbar" oncontextmenu="return showcm(event,'titbar','notepad-fonts')">
+			<img src="icon/notepad.png" class="icon">
+			<p>字体</p>
+			<div>
+				<a class="a wbtg red" onclick="hidewin('notepad-fonts', 'configs')"><i class="bi bi-x-lg"></i></a>
+			</div>
+		</div>
+		<div class="loadback">
+			<img src="icon/notepad.png" class="icon">
+		</div>
+		<div class="content" id="win-notepad-font">
+		<div class="row">
+			<div class="select-input" id="win-notepad-font-type">
+				<div class="description">字体</div>
+				<input type="text" />
+				<list class="value-box">
+					<a class="option">Arial</a>
+					<a class="option">Book Antiqua</a>
+					<a class="option">Cascadia Code</a>
+					<a class="option">Comic Sans MS</a>
+					<a class="option">Consolas</a>
+					<a class="option">Courier</a>
+					<a class="option">cursive</a>
+					<a class="option">Geneva</a>
+					<a class="option">Georgia</a>
+					<a class="option">Ink Free</a>
+					<a class="option">Lucida Console</a>
+					<a class="option">Microsoft YaHei UI</a>
+					<a class="option">Monaco</a>
+					<a class="option">monospace</a>
+					<a class="option">Palatino Linotype</a>
+					<a class="option">serif</a>
+					<a class="option">Tahoma</a>
+					<a class="option">仿宋</a>
+					<a class="option">方正舒体</a>
+					<a class="option">华文行楷</a>
+					<a class="option">楷体</a>
+					<a class="option">宋体</a>
+					<a class="option">幼圆</a>
+				</list>
+			</div>
+			<div class="select-input" id="win-notepad-font-size">
+				<div class="description">大小</div>
+				<input type="text" />
+				<list class="value-box">
+					<a class="option">初号</a>
+					<a class="option">小初</a>
+					<a class="option">一号</a>
+					<a class="option">小一</a>
+					<a class="option">二号</a>
+					<a class="option">小二</a>
+					<a class="option">三号</a>
+					<a class="option">小三</a>
+					<a class="option">四号</a>
+					<a class="option">小四</a>
+					<a class="option">五号</a>
+					<a class="option">小五</a>
+				</list>
+			</div>
+			<div class="select-input" id="win-notepad-font-style">
+				<div class="description">字形</div>
+				<input type="text" />
+				<list class="value-box">
+					<a class="option">正常</a>
+					<a class="option">斜体</a>
+					<a class="option">粗体</a>
+					<a class="option">粗偏斜体</a>
+				</list>
+			</div>
+			</div>
+			<div class="preview">
+				<div class="description">
+					预览
+				</div>
+				<div class="preview-box">
+					<div>Hello</div>
+					<div>你好</div>
+					<div>こんにちは</div>
+				</div>
+			</div>
+			<div class="buttons">
+				<a class="a submit act" onclick="commitFont();">确定</a>
+				<a class="a cancel act" onclick="hidewin('notepad-fonts', 'configs');">取消</a>
+			</div>
+		</div>
+	</div>
+	<div class="window terminal"  onmousedown="focwin('terminal')" ontouchstart="focwin('terminal')">
+		<div class="titbar" oncontextmenu="return showcm(event,'titbar','terminal')" ondblclick="maxwin('terminal')">
+			<img src="icon/terminal.png" class="icon">
+			<p>终端</p>
+			<div>
+				<a class="a wbtg red" onclick="hidewin('terminal')"><i class="bi bi-x-lg"></i></a>
+				<a class="a wbtg max" onclick="maxwin('terminal')"><i class="bi bi-app"></i></a>
+				<a class="a wbtg" onclick="minwin('terminal')"><i class="bi bi-dash-lg"></i></a>
+			</div>
+		</div>
+		<div class="loadback">
+			<img src="icon/terminal.png" class="icon">
+		</div>
+		<div class="content" id="win-terminal">
+			<pre>Micrsotft Windosw [版本 12.0.39035.7324]
+(c) Micrsotft Corparotoin。保所留有权利。
+一个摆设，后续会完善。 
+
+C:\Windows\System32> <input type="text" oninput="setTimeout(() => {$('#win-terminal>pre')[0].innerHTML+=this.outerHTML;$('#win-terminal>pre>input').focus()}, 0);$('#win-terminal>pre')[0].innerText+=$(this).val();"></pre>
+		</div>
+	</div>
+	<div class="window edge" onmousedown="focwin('edge')" ontouchstart="focwin('edge')">
+		<div class="titbar" oncontextmenu="return showcm(event,'titbar','edge')" ondblclick="maxwin('edge')">
+			<img src="icon/edge.png" class="icon"><p style="display: none;">Microsoft Edge</p>
+			<div class="tabs">
+				<div class="tab">
+					<p>新建标签页</p>
+					<span class="clbtn bi bi-x"></span>
+				</div>
+				<a class="new bi bi-plus" onclick="apps.edge.newtab();"></a>
+			</div>
+			<div>
+				<a class="a wbtg red" onclick="hidewin('edge')"><i class="bi bi-x-lg"></i></a>
+				<a class="a wbtg max" onclick="maxwin('edge')"><i class="bi bi-app"></i></a>
+				<a class="a wbtg" onclick="minwin('edge')"><i class="bi bi-dash-lg"></i></a>
+				<a class="a wbtg" onclick="apps.edge.newtab();apps.edge.goto('https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__SDw7SZUMlJQMUYzMDVOMlQ2MFdQOUpQQlQ2S1hTSi4u');apps.edge.rename('反馈')" win12_title="反馈"><i class="bi bi-chat-dots"></i></a>
+			</div>
+		</div>
+		<div class="loadback">
+			<img src="icon/edge.png" class="icon">
+		</div>
+		<div class="content" id="win-edge">
+			<div class="tool">
+				<a class="a" style="filter: contrast(0.2);">
+					<i class="bi bi-arrow-left-short" style="font-size: 25px;--top:-5px;"></i>
+				</a>
+				<a class="a" style="filter: contrast(0.2);">
+					<i class="bi bi-arrow-right-short" style="font-size: 25px;--top:-5px;"></i>
+				</a>
+				<a class="a" onclick="$('#win-edge>iframe.show').attr('src',$('#win-edge>iframe.show').attr('src'))">
+					<i class="bi bi-arrow-clockwise"></i>
+				</a>
+				<input type="text" onkeyup="if(event.keyCode==13&&$(this).val()!=''){apps.edge.goto($(this).val())}" placeholder="在必应中搜索，或输入一个网址" class="url" spellcheck="false">
+				<input type="text" onkeyup="if(event.keyCode==13&&$(this).val()!=''){apps.edge.rename($(this).val())}" placeholder="为标签页命名" class="rename" spellcheck="false">
+				<a class="a">
+					<i class="bi bi-info-circle" win12_title="浏览器只能访问允许嵌套的网站。由于规则限制无法获取网页标题，请右键标签页手动命名"></i>
+				</a>
+				<a class="a" style="filter: contrast(0.2);">
+					<i class="bi bi-star"></i>
+				</a>
+				<a class="a" style="filter: contrast(0.2);">
+					<i class="bi bi-code-slash"></i>
+				</a>
+			</div>
+			<iframe frameborder="0" class="0 show">
+			</iframe>
+		</div>
+	</div>
+	<div class="msg update" oncontextmenu="return showcm(event,'msgupdate',null)">
+		<div class="main" onclick="openapp('about');if($('.window.about').hasClass('min'))minwin('about');
+			$('#win-about>.about').removeClass('show');$('#win-about>.update').addClass('show');
+			$('#win-about>.update>div>details:first-child').attr('open','open')">
+			<p class="tit"></p>
+			<p class="cont"></p>
+		</div>
+		<div class="a hide" onclick="$('.msg').removeClass('show')"><i class="bi bi-arrow-right-short"></i></div>
+	</div>
+	<script src="desktop.js"></script>
+</body>
+</html>

@@ -1,0 +1,330 @@
+@font-face {
+    font-family: SettingsIcons;
+    src: url(../icons/setting/icons.woff2) format("woff2")
+}
+
+#win-setting>.page>.cnt>.title {
+    font-size: 35px;
+    margin: 0;
+}
+
+.s-icon {
+    font-family: SettingsIcons;
+}
+
+#win-setting {
+    display: flex;
+    height: calc(100% - 32px);
+}
+
+#win-setting>* {
+    height: 100%
+}
+
+#win-setting>.page {
+    flex-grow: 1
+}
+
+
+#win-setting>.menu {
+    width: 20%;
+    min-width: 280px;
+    padding: 10px 5px 5px 10px;
+}
+
+#win-setting>.menu>.user {
+    display: flex;
+    padding: 10px 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    /* transition: 200ms; */
+}
+
+#win-setting>.menu>.user:hover {
+    background-color: var(--hover);
+}
+
+#win-setting>.menu>.user>div>p:first-child {
+    font-size: 25px;
+    margin-bottom: -7px;
+}
+
+#win-setting>.menu>.user>div>p:last-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#win-setting>.menu>.user>div {
+    padding: 0px 0 0 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#win-setting>.menu>.user>svg {
+    background-color: var(--bggrey);
+    box-shadow: 0 0 10px var(--sd);
+    width: 60px;
+    min-width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding: 8px;
+}
+
+#win-setting>.menu>list {
+    padding-bottom: 13px;
+    margin-left: 5px;
+    margin-top: 40px;
+    height: calc(100% - 123px);
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+#win-setting>.menu>list>a {
+    padding: 5px 15px;
+    font-size: 15px;
+    display: flex;
+    margin-bottom: 3px;
+}
+
+#win-setting>.menu>list>a:not(.enable) {
+    transform: none !important;
+    filter: contrast(0.6) brightness(0.8) opacity(0.3);
+}
+
+#win-setting>.menu>list>a>p {
+    margin: 5px 7px;
+}
+
+#win-setting>.menu>list>a>img {
+    height: 20px;
+    width: 20px;
+    margin: 1px 10px 0 0;
+}
+
+#win-setting>.menu>list>a.check {
+    background-color: var(--hover) !important;
+}
+
+#win-setting>.page {
+    overflow: hidden;
+    padding-left: 10px;
+    margin: 2px 0 0 0;
+}
+
+#win-setting>.page>.cnt {
+    overflow-y: scroll;
+    opacity: 0;
+    height: 0;
+    transition: transform 300ms cubic-bezier(0,0,0,1), opacity 300ms 50ms,height 0ms;
+    transform: translate(0, 50%);
+}
+
+#win-setting>.page>.cnt.show {
+    height: 100%;
+    transform: none;
+    opacity: 1;
+    display: block;
+}
+
+.setting-list {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5px 60px 5px;
+    margin-bottom: 0;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.setting-list>* {
+    width: 100%;
+    color: var(--text);
+    background: radial-gradient(circle, var(--card), var(--card));
+    margin-bottom: 5px;
+    border-radius: 10px;
+    border: 1.5px solid #6f6f6f30;
+    text-decoration: none;
+    display: flex;
+    padding: 10px 15px;
+    box-shadow: 2px 2px 5px var(--sd);
+    transition: transform 300ms cubic-bezier(0.14, 1.02, 0.17, 0.03);
+    justify-content: space-around;
+}
+
+.setting-list>a:hover {
+    text-decoration: none;
+    background-color: var(--hover-half);
+}
+
+.setting-list>a:active {
+    filter: opacity(0.75);
+}
+
+.setting-list>a.dp{
+    margin-bottom: 0px;
+    z-index: 1;
+}
+
+.setting-list>a.dp.show {
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: 2px 1px 3px var(--sd);
+    margin-bottom: 1px;
+}
+
+.setting-list>a.dp>.bi::before {
+    transition: 150ms;
+}
+
+.setting-list>a.dp:active>.bi::before{
+    transform: scale(0.7);
+}
+
+.setting-list>a.dp.show:active>.bi::before{
+    transform: scale(0.7) rotate(-180deg);
+}
+
+.setting-list>a.dp.show>.bi::before {
+    transform: rotate(-180deg);
+}
+
+.setting-list>div.dp {
+    border: 1.5px solid #6f6f6f30;
+    border-top: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    max-height: 0px;
+    transition: max-height 300ms,padding 100ms 200ms linear,opacity 200ms 100ms,transform 200ms 200ms;
+    transform: translateY(-50px);
+    overflow: hidden;
+    display: block;
+    padding: 0 15px;
+    /* transform: translate(0,-100%); */
+    /* transform-origin: bottom; */
+    opacity: 0;
+    /* display: none; */
+    margin:0 0 4px 0;
+}
+
+.setting-list>div.dp.show {
+    padding: 10px 15px;
+    transition: max-height 300ms 100ms,padding 100ms 50ms linear,opacity 200ms 100ms,transform 300ms 50ms;
+    transform: none;
+    max-height: 1000px;
+    /* padding: 10px 15px; */
+    opacity: 1;
+    /* display: block; */
+}
+
+.checkbox{
+    width: 40px;
+    height: 20px;
+    border-radius: 10px;
+    background: linear-gradient(90deg,var(--hover-b),var(--hover-b));
+    transition: 200ms;
+}
+
+.checkbox::before{
+    content: '';
+    display: block;
+    height: 16px;
+    width: 16px;
+    border-radius: 8px;
+    background: #fff;
+    position: relative;
+    top: 2px;
+    left: 2px;
+    transition: 100ms;
+    transform: scale(0.8);
+}
+
+.checkbox.checked{
+    background: linear-gradient(90deg,var(--theme-1),var(--theme-2));
+}
+
+.checkbox.checked::before{
+    left: 22px;
+}
+
+.checkbox:hover::before{
+    transform: none;
+}
+
+.checkbox:active::before{
+    width: 20px;
+}
+
+.checkbox.checked:active::before{
+    left: 18px;
+}
+
+div.app-color .color {
+    width: 25px;
+    height: 25px;
+    border-radius: 8px;
+    margin: 5px 0 0 5px;
+    outline: none;
+    border: none;
+    padding: 0;
+    transition: 200ms;
+}
+
+div.app-color .act.color:active{
+    transform: scale(0.8);
+}
+
+div.app-color input[type=color] {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    border: none;
+    padding: 0;
+    outline: none;
+    margin: 0;
+}
+
+.setting-list>*>icon {
+    font-family: SettingsIcons;
+    font-size: 20px;
+    margin: 10px 20px 0 5px;
+    background-image: linear-gradient(100deg, var(--theme-1), var(--theme-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: saturate(130%) brightness(1.1);
+}
+
+.setting-list>*>icon.b {
+    font-family: bootstrap-icons;
+}
+
+.setting-list>*>div>p:first-child {
+    font-size: 20px;
+    margin: 0 0 0 0;
+}
+
+.setting-list>*>div>p:last-child {
+    font-size: 10px;
+    color: #7f7f7f;
+    margin-bottom: 0px;
+}
+
+.setting-list>*>.bi,
+.setting-list>*>.alr {
+    flex-grow: 1;
+    margin-top: 15px;
+    color: #7f7f7f;
+    font-size: 20px;
+}
+
+.setting-list>*>.alr>*{
+    float: right;
+    margin-right: 20px;
+}
+
+.setting-list>*>.bi::before {
+    position: relative;
+    float: right;
+    right: 5px;
+}

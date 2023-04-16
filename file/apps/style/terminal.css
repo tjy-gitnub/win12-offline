@@ -1,0 +1,48 @@
+.window.terminal{
+    --text: #ddd;
+    --bg: #000000;
+    --bg30: #00000030;
+    --bg50: #00000050;
+    --bg70: #00000070;
+    --sd: #00000070;
+    --card: #72727240;
+    --hover: #ffffff40;
+    --hover-half:#ffffff20;
+    --hover-b: #ffffff30;
+    --bggrey: #444;
+    --bgul: url('./bg-dark.svg');
+    --mm: #ffffff50;
+    --cm: #252525bb;
+    --bar: #7272722a;
+    --hr:#00000050;
+    --unfoc:#333;
+    cursor: default;
+}
+
+#win-terminal>pre{
+    color: #fff;
+    margin: 5px 10px;
+    font-family:"Microsoft YaHei";
+    user-select: text;
+}
+
+#win-terminal>pre::selection{
+    background: #ddd;
+    background-clip: content-box;
+    color: #333;
+}
+
+#win-terminal>pre>input{
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    color: #fff;
+    cursor: default;
+}
+
+#win-terminal>pre>input::selection{
+    background: #ddd;
+    background-clip: content-box;
+    color: #333;
+}
